@@ -128,13 +128,5 @@ Lets discuss on few MySQL Clauses:
      f.BETWEEN Operator-The BETWEEN operator is used to filter data within a range. It works for numeric, text, and date values.
        eg:SELECT first_name, salary FROM employeesWHERE salary BETWEEN 50000 AND 100000;
     
-     g.CURDATE()-Returns the current date.
-       eg:SELECT CURDATE() AS current_date;
-      
-     h.DATEDIFF()-Returns the number of days between two dates.
-       eg:SELECT DATEDIFF(CURDATE(), hire_date) AS days_employed FROM employees;
-
-     i.YEAR(), MONTH(), DAY()-Extracts the year, month, or day from a date.
-       eg:SELECT YEAR('2024-12-03') AS year;
-
-  
+    
+    
