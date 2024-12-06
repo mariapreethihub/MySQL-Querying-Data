@@ -43,10 +43,10 @@ insert into Person(Fname,Lname,Population,Rating,Country_id,Country_name)values
 ('Paul','Thomas',67,4.5,2,'UK'),
 ('John','Paul',67,3,2,'UK'),
 ('Peter','Jo',266,5,3,'Australia'),
-('John','Jose',1430,4,3,'China'),
+('John','Jose',1430,4,8,'China'),
 ('Antony','Thomas',1417,4,4,'India'),
-('John','Bastin',336,4.5,5,'Canada'),
-('Mathew','Paul',40,4.5,5,'Canada');
+('John','Bastin',336,4.5,7,'Canada'),
+('Mathew','Paul',40,4.5,7,'Canada');
 
 #1. SQL query to print the first three characters of Country_name from the Country table.
 select substring(Country_name,1,3) AS First_three_character from Country;
