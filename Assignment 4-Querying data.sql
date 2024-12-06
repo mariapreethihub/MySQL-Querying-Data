@@ -3,9 +3,8 @@ create database population;
 use population;
 
 ---CREATING TABLE COUNTRY
-create table Country (
-    Id INT PRIMARY KEY,                 
-    Country_name VARCHAR(50),
+create table Country (                 
+    Country_name VARCHAR(50) PRIMARY KEY,
     Population INT,
     Area INT);
 
@@ -17,36 +16,36 @@ create table Person (
     Rating DECIMAL(3, 1),
     Country_Id INT,
     Country_name VARCHAR(50),
-    FOREIGN KEY (Country_Id) REFERENCES Country(Id));
+    FOREIGN KEY (Country_name) REFERENCES Country(Country_name));
 
 --INSERTING VALUES INTO TABLE COUNTRY
 ## population entered in million and area in million sq.km
 
-INSERT INTO country (id,country_name, population, area) VALUES
-(1,'USA', 336.0, 9.83),
-(2,'UK', 67.0, 0.24),
-(3,'Australia', 266.0, 7.69),
-(4,'India', 1417.0, 3.29),
-(5,'Palau', 0.018, 0.00046),
-(6,'Tuvalu', 1.1, 0.00003),
-(7,'Canada', 40.0, 9.98),
-(8,'China', 1430, 9.60),
-(9,'Bangladesh', 170, 0.14),
-(10,'Pakistan', 220.0, 0.81);
+INSERT INTO country (Country_name, population, area) VALUES
+('USA', 336.0, 9.83),
+('UK', 67.0, 0.24),
+('Australia', 266.0, 7.69),
+('India', 1417.0, 3.29),
+('Palau', 0.018, 0.00046),
+('Tuvalu', 1.1, 0.00003),
+('Canada', 40.0, 9.98),
+('China', 1430, 9.60),
+('Bangladesh', 170, 0.14),
+('Pakistan', 220.0, 0.81);
 
 --INSERTING VALUES INTO TABLE PERSON
 ## population entered in million 
-insert into person(Fname,lname,population,rating,country_id,country_name)values
+insert into person(Fname,lname,population,rating,country_id,Country_name)values
 ('John','Joseph',336,4.5,1,'USA'),
 ('Mathew','Joseph',336,4,1,'USA'),
 ('Varghese','Peter',336,3.5,1,'USA'),
 ('Paul','Thomas',67,4.5,2,'UK'),
 ('John','Paul',67,3,2,'UK'),
 ('Peter','Jo',266,5,3,'Australia'),
-('John','Jose',1430,4,3,'China'),
-('Antony','Thomas',1417,4,4,'India'),
-('John','Bastin',336,4.5,5,null),
-('Mathew','Paul',40,4.5,6,'Canada');
+('John','Jose',1430,4,4,'China'),
+('Antony','Thomas',1417,4,5,'India'),
+('John','Bastin',336,4.5,6,null),
+('Mathew','Paul',40,4.5,7,'Canada');
 
 ---#1 LISTING DISTINCT COUNTRY NAMES FROM TABLE PERSON
 select distinct country_name from person;
