@@ -84,7 +84,7 @@ select Population AS First_Three_Rows_Population from Country limit 3;
 select * from Country order by rand() limit 3;
 
 #11.Listing all persons ordered by their rating in descending order.
-select concat(Fname," ",Lname) AS Full_Name,Rating from Person order by rating desc;
+select Fname,Rating from Person order by rating desc;
 
 #12.Listing total population for each country in the Person table.
 select Distinct(Country_name),Population AS Total_Population_in_million from Person order by Population;
